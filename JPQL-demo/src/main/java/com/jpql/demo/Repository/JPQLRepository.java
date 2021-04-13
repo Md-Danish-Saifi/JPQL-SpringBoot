@@ -10,10 +10,10 @@ import com.jpql.demo.Model.JPQLModel;
 @Repository
 public interface JPQLRepository extends JpaRepository<JPQLModel, Integer> {
 
-	@Query(value = "SELECT * FROM jpqlmodel",nativeQuery = true)
+	@Query(value = "SELECT * FROM user",nativeQuery = true)
 	public List<JPQLModel> getAllUser();
 	
-	@Query(value = "SELECT * FROM jpqlmodel WHERE name = ?1",nativeQuery = true)
+	@Query(value = "SELECT * FROM user WHERE name = ?1",nativeQuery = true)
 	public List<JPQLModel> getAllUserByName(String name);
 
 
